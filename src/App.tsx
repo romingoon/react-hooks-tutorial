@@ -1,12 +1,10 @@
 import './App.css';
-import Counter from './components/Counter';
-import Info from './components/Info';
+import Average from './components/Average';
 
 function App() {
   return (
     <>
-      <Counter />
-      <Info />
+      <Average />
     </>
   );
 }
