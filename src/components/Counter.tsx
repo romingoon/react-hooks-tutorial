@@ -1,21 +1,8 @@
 import { useReducer } from 'react';
-
-function reducer(state: any, action: any) {
-  switch (action.type) {
-    case 'INCREMENT':
-      return { value: state.value + 1 };
-    case 'DECREMENT':
-      return { value: state.value - 1 };
-    case 'RESET':
-      return { value: 0 };
-
-    default:
-      return state;
-  }
-}
+import useCounter from '../hooks/useCounter';
 
 const Counter = () => {
-  const [state, dispatch] = useReducer(reducer, { value: 0 });
+  const [state, dispatch] = useCounter({ value: 0 });
 
   return (
     <div>
